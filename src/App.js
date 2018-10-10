@@ -5,9 +5,9 @@ import './App.css';
 class App extends Component {
   componentDidMount(){
     //loop();
-    const connection = new WebSocket('ws://mkoo-ud:1337');
+    const connection = new WebSocket('ws://localhost:1337');
     connection.onmessage = (msg) => {
-      console.log(msg);
+      console.log(msg.data);
     }
   }
   render() {
