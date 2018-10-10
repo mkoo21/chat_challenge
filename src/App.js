@@ -3,6 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  componentDidMount(){
+    //loop();
+    const connection = new WebSocket('ws://mkoo-ud:1337');
+    connection.onmessage = (msg) => {
+      console.log(msg);
+    }
+  }
   render() {
     return (
       <div className="App">
